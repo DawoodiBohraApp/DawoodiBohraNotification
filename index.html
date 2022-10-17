@@ -5,1942 +5,659 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dawoodi Bohra App Notification</title>
 
+    <title>Dawoodi Bohra App - Mumineen - Duas, Madeh, Marasiya</title>
+
+    <meta name="description" content="Dawoodi Bohra App is an app for the Dawoodi Bohra mumineen all around the world. This App provides all Duas, Madeh, Marasiya, Tasbih And Many More. Khuda ta'ala, Aqa Moula Syedna Mufaddal Saifuddin Moula TUS ni umr shareef ne qyamaat na din lag daraz ane daraz kare... Ameen">
+    <meta name="keywords" content="Dawoodi Bohra App, Dawoodi Bohra, Mumineen, Mumineen App, Bohra App, ITS52, Alvazarat, Amalat.com, Live majlis, Bohra Mumineen, Zeninfosys, Misbah, Misbah.info, Syedna Mufaddal Saifuddin, Syedna Mohammed Burhanuddin, Syedna Taher Saifuddin">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="drawable-xxhdpi/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+    
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  window.OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "0376e8b3-2744-469b-bd22-888782c74b14",
+    });
+  });
+</script>
+<script src="https://kit.fontawesome.com/4b578aa818.js" crossorigin="anonymous"></script>
     <style>
         * {
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+            font-family: 'Poppins', sans-serif;
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+
         }
 
-        h2 {
+        #heading {
+            background-color: #075e55;
+            color: white;
+            width: 100%;
+
+            grid-area: head;
+            padding-left: 10px;
+
+
+        }
+
+        iframe {
+            width: 110%;
+            height: 32px;
+
+        }
+
+
+
+        .img {
+            /* margin-top: 50px; */
+            /* height: 250px; */
+            width: 250px;
+            /* display: flex; */
+            /* align-items: center; */
+
+        }
+
+        #qiyam {
+            /* grid-area: qiyama; */
+            /* position: fixed; */
+            position: relative;
+            width: 100%;
+            top: 0px;
+        }
+
+        #hijri {
+            /* grid-area: qiyama; */
+            /* position: fixed; */
+            position: relative;
+            height: 100px;
+            width: 100%;
+            top: 0px;
+            z-index: -10;
+        }
+
+        .container {
+            display: grid;
+
+
+            grid-template-columns: repeat(3, 1fr);
+            /* display: flex; */
+            align-items: center;
+            justify-items: center;
+            grid-gap: 1px;
+
+        }
+
+        /*  @font-face {
+            font-family: "amiri";
+            src: url("regularamiri.ttf");
+        }
+
+
+         ul {
             display: flex;
+            list-style: none;
+            justify-content: space-between;
+            background-color: #075e55;
+            color: white;
+            height: 40px;
+            align-items: center;
+            width: 100%;
+            position: fixed;
+            /* padding-right: 100px; 
+        }
+
+        */
+        #icons {
+            display: flex;
+
+        }
+
+        #ll {
+            margin-right: 40px;
+            color: white;
+        }
+
+        #logoname {
+            margin-left: 10px;
+        }
+
+        #img1,
+        #img2,
+        #img3 {
+            margin-top: 0px;
+        }
+
+        #bell {
+            color: white;
+        }
+
+
+        nav {
+            background: #075e55;
+            height: 70px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+
+        h1.logo {
+            color: white;
+            font-size: 30px;
+            line-height: 80px;
+            /* padding: 0 100px; */
+            padding-left: 15px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            float: right;
+            margin-right: 20px;
+        }
+
+        nav ul li {
+            display: inline-block;
+            line-height: 80px;
+            margin: 0 5px;
+        }
+
+        nav ul li a {
+            color: white;
+            font-size: 17px;
+            padding: 7px 13px;
+            border-radius: 3px;
+            text-transform: uppercase;
+        }
+
+        /* a.active,
+        a:hover {
+            /* background:  #075e5560; */
+        /* transition: 0.5s; 
+        } */
+
+        .checkbtn {
+            font-size: 30px;
+            color: white;
+            float: right;
+            line-height: 80px;
+            margin-right: 15px;
+            cursor: pointer;
+            display: none;
+        }
+
+        #check {
+            display: none;
+        }
+
+
+        /* ------------------- Hijri Date */
+
+        #container {
+            display: grid;
+            grid-template-areas:
+                'hijrig englishg';
+        }
+
+        #hijrig {
+            grid-area: hijrig;
+            font-size: 18px;
+            color: #47c155;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+            /* font-family: datef; */
+            margin: 0%;
+            padding: 0%;
+
+        }
+
+        #englishg {
+            grid-area: englishg;
+            font-size: 18px;
+            color: #47c155;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+            /* font-family: datef; */
+
+
+
+        }
+
+        #hdate,
+        #date,
+        #hijrig span,
+        #englishg span {
+            color: #48c456;
+            display: inline;
+            font-family: "amiri";
+            font-weight: bold;
+
+        }
+
+        .spacer {
+            margin: 1px;
+        }
+
+        #green {
+            width: 400px;
+            margin-top: 5px;
+        }
+
+
+        @media (max-width: 952px) {
+            h1.logo {
+                font-size: 20px;
+                padding-left: 15px;
+            }
+
+            nav ul li a {
+                font-size: 16px;
+            }
+
+            nav {
+                height: 50px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+
+        }
+
+        @media (max-width: 858px) {
+            .checkbtn {
+                display: block;
+            }
+
+            .img {
+                /* margin-top: 50px; */
+                /* height: 250px; */
+                width: 130px;
+                /* display: flex; */
+                /* align-items: center; */
+
+            }
+
+            ul {
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                background: #2c3e50;
+                top: 80px;
+                left: -100%;
+                text-align: center;
+                transition: all .5s;
+            }
+
+            nav ul li {
+                display: block;
+                margin: 50px 0;
+                line-height: 30px;
+            }
+
+            nav ul li a {
+                font-size: 20px;
+            }
+
+            a:hover,
+            a.active {
+                background: none;
+                color: #075e5560;
+            }
+
+            #check:checked~ul {
+                left: 0;
+            }
+
+            h1.logo {
+
+                font-size: 20px;
+
+            }
+
+            nav {
+                height: 50px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            #englishg,
+            #hijrig {
+                font-size: 12px;
+            }
+
+            #hdate,
+            #date,
+            #hijrig span,
+            #englishg span {
+                color: #48c456;
+                display: inline;
+                font-family: "amiri";
+                font-weight: bold;
+
+            }
+
+            #green {
+                width: 100px;
+
+            }
+        }
+
+        .align {
+            display: flex;
+
+        }
+
+
+        @media(min-width:300px) and (max-width: 400px) {
+            .img {
+                width: 100px;
+            }
+
+            #hijrig {
+                font-size: 10px;
+            }
+
+            #englishg {
+                font-size: 10px;
+            }
+
+            #green {
+                width: 110px;
+            }
+
+            h1.logo {
+
+                font-size: 15px;
+
+            }
+        }
+
+        @media (max-width: 299px) {
+            .img {
+                width: 80px;
+            }
+
+            #hijrig {
+                font-size: 10px;
+            }
+
+            #englishg {
+                font-size: 10px;
+            }
+
+            #green {
+                width: 110px;
+            }
+
+            h1.logo {
+
+                font-size: 15px;
+
+            }
+        }
+
+        .nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 55px;
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+            background-color: #ffffff;
+            display: flex;
+            overflow-x: auto;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .nav__link {
+            display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
+            flex-grow: 1;
+            height: 100%;
+            min-width: 50px;
+            overflow: hidden;
+            white-space: nowrap;
+            font-family: sans-serif;
+            font-size: 13px;
+            color: #444444;
+            text-decoration: none;
+            font-weight: bold;
+            -webkit-tap-highlight-color: transparent;
+            transition: background-color 0.1s ease-in-out;
+        }
+
+        .nav__link:hover {
+            background-color: #eeeeee;
+        }
+
+        .nav__link--active {
+            color: #009578;
+        }
+
+        .nav__icon {
             font-size: 20px;
         }
 
-        #imgbanner {
-            width: 350px;
-            margin: auto;
+        #spacer {
+            height: 70px;
         }
 
-        #imgplay {
-            width: 150px;
+      
+
+        /* Dark Mode */
+        /* @media (prefers-color-scheme: light) {
+            body{
+                background-color: #ffffff;
+            }
+        } */
+        @media (prefers-color-scheme: dark) {
+            body{
+                background-color: #353535;
+            }
+            nav{
+                background-color: #232D36;
+            }
+            .nav{
+                background-color: #2A2C2B;
+                
+            }
+            .nav__icon{
+                color: white;
+                
+            }
+            .nav__text{
+                color: white;
+            }
+            .nav__link:hover {
+            background-color: #191a19;
+        }
         }
 
-        #pdf {
-            width: 20px;
-
-        }
-
-        #pdftext {
-            position: absolute;
-            left: 38px;
-
-        }
-
-        #anchor {
-            text-decoration: none;
 
 
-        }
 
-        #dba {
-            width: 90vw;
-            display: block;
-            margin: auto;
-        }
 
-        p {
-            line-height: 1.8;
-        }
-        #whatsapp{
-            width: 30px ;
-           
-        }
-        #whatsappdiv{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            
-        }
-        #v{
-            width: 95vw;
-        }
+
+
+
+
     </style>
+
 </head>
 
 <body>
-    
-    
 
-<!--
-    <center>
-        <h2>Aalam e Imaan Urs Syedna Mohammed Burhanuddin RA 16mi Raat 1444H PDF </h2>
-        <a href="https://github.com/DawoodiBohraApp/DawoodiBohraNotification/raw/main/Alameiman_Urs_Mubarak_Ayyam_SMB_16mi_Raat_1444H.pdf" target="_self">Aalam e Imaan Urs Syedna Mohammed Burhanuddin RA 16mi Raat 1444H PDF</a>
-    </center>
-<br>
-<hr>
+    <!-- <img class="img" src= "drawable/icon2.png" alt=""> -->
 
+    <nav>
+        <h1 class="logo">Dawoodi Bohra App</h1>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
 
-
-<br><br>
-     <h2>Moharram ul Haraam ni Biji Taarikh na Roza ni Zikr</h2>
-
-    <img src="https://raw.githubusercontent.com/DawoodiBohraApp/DawoodiBohraNotification/main/Screenshot_20220729-181025_Dawoodi%20Bohra%20App%20Premium.jpg" alt="" id="dba">
-    <hr> -->
-
-    <!-- <div class="feature">
-        <h2>Update the Dawoodi Bohra App</h2>
-
-        <p>
-           <strong>What's New:</strong>  <br>
-            1) Dawoodi Bohra App is now Offline - Update the App Now.<br><br>
-            2) Shortcut Option added in all Sections. (See below video.)- You can now create shortcut to desktop to open specific section easily.<br><br>
-            3) Ashara Mubaraka 1444h Section. (PDFs for each day will be uploaded accordingly). <br><br>
-       <br>
-Do share this app with your family and friends. <br><br>
-            "Thank You." <br>
-            
-
-
-        </p>
-
-       <img id="dba" src="https://github.com/DawoodiBohraApp/DawoodiBohraNotification/blob/main/ezgif-3-05ed60f54f.gif?raw=true" alt="">
- 
-    </div> 
-
-
-     -->
-   <img id="dba"
-        src="https://raw.githubusercontent.com/DawoodiBohraApp/DawoodiBohraNotification/main/WhatsApp%20Image%202022-10-16%20at%208.33.19%20PM.jpeg"
-        alt="">
-
-
-    <p>
-
-<b> Whispering Woods Family Resort 😍 </b>
-<br><br>
-Don’t you want to enjoy this 🎇 Diwali vacation in paradise?🏕️<br>
-Make it a luxury getaway at Whispering Woods Family Jungle Resort ❄️<br>
-<b> A PLACE LIKE NOWHERE YOU'VE EVER BEEN 😍 🏕️ </b><br>
-<br>
-𝐈𝐧𝐜𝐥𝐮𝐬𝐢𝐨𝐧𝐬:<br>
-✅  Jungle Safari 🚗<br>
-✅ Night Trail 👣 <br>
-✅ Sunset Point Trek 🌄<br>
-✅ Jungle Trek 🌳<br>
-✅ Boating at Nearby Dam 🚣<br>
-✅ Waterfalls 🌊 <br>
-✅ Tent Stay ⛺️ <br>
-✅ Beautiful Rooms <br>
-✅ Swimming Pool 🏊‍♀<br>
-And Many More...<br>
-<br>
-Kindly Call or DM us for details: 
-<br><br>
-📲  <a href="tel:+919423490635">+919423490635</a>
-<br><br>
-<a href="mailto:whisperingwoodsamba@gmail.com">whisperingwoodsamba@gmail.com</a> 📧
-<br><br>
-📷 Instagram 👇 <br>
- <a href="https://instagram.com/whispering_woods_resort_amba?igshid=YmMyMTA2M2Y=">@whispering_woods_resort_amba</a>
-<br><br>
-Location: 📍<br>
-Chalanwadi Road, Amba Ghat, Sahuwadi, Kolhapur (MH), India<br>
-<br>
-<b> Whatsapp 🪀👇<br>
-<a href="https://wa.me/+919423490635*?text=I%20want%20to%20know%20the%20Details%20about%20this.%20As%20i%20have%20saw%20your%20ad%20in%20DawoodiBohraApp."
-            target="_blank">Message us on Whatsapp.</a> <br>
------------------------------<br>
-Join our Whatsapp Group for more details and offers<br>
-<a href="https://chat.whatsapp.com/E71DgTK9KriKORx1Jen5Tl">Join Group Now</a>
-</b>
-    </p>
-        <hr>
-    
-    <center>
-<h2>ADVERTISE & BRAND YOUR BUSINESS WITH US</h2>
-<div id="whatsappdiv">
-    <img id="whatsapp" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/2044px-WhatsApp.svg.png" alt=""> <span> <a href="https://wa.me/*+917976486310*?text=I%20want%20to%20Advertise%20/%20Brand%20my%20Business.%20Please%20let%20me%20know%20the%20details">WHATSAPP US</a></span>
-</div>
-
-</center>
-    <hr>
-<center>
-         <video controls width="350" height="350">
-
-    <source src="https://github.com/DawoodiBohraApp/DawoodiBohraNotification/raw/main/VID-20221015-WA0014.mp4"
-            type="video/webm">
-</video></center>
-
-
-    <p>
-<b> WANT TO GET RELIEF FROM COLD ❄️ COUGH 😷 AND FLU 🤧 
-<br><br>
-SAMS Ginger Honey </b>
-<br><br>
-✓Fights cold and cough 😷<br>
-✓Natural Pain Killer<br>
-✓Keeps voice 🎙️ and Throat Healthy<br>
-✓Tasty, Delicious 😋<br>
-✓Immunity booster ❤️‍🩹<br>
-<br>
-</b>✅100% Pure & Natural Honey🐝🍯</b>
-<br><br>
-Honey available for:<br>
-🍯 Quran Hifz<br>
-🍯 Tonic for Stress/ Depression etc<br>
-🍯 Diabetes/BP/ Cholestrol<br>
-🍯 Weight loose<br>
-🍯 Migraine Relief<br>
-🍯 Cold and cough<br>
-🍯 Pain Relief<br>
-🍯 Digestion Relief<br>
-🍯 Arthritis<br>
-🍯 Dry fruits Honey<br>
-🍯 Fruits Honey<br>
-🍯 Pure Honey with Kalonji<br>
-🍯 Honey for PCOD/PCOS<br>
-🍯 Chocolate Honey<br>
-🍯 Stone Honey<br>
-🍯 And many other verities<br>
-<br>
-Delivery 🚚 all over India🇮🇳
-<br><br>
-🪀 <a href="https://wa.me/+918097804120*?text=I%20want%20to%20know%20the%20Details%20about%20this.%20As%20i%20have%20saw%20your%20ad%20in%20DawoodiBohraApp."
-            target="_blank">Message us on Whatsapp.</a> <br>
-        
-
-  </p>
-    <hr>
-<!--
-    <img id="dba"
-        src="https://raw.githubusercontent.com/DawoodiBohraApp/DawoodiBohraNotification/main/WhatsApp%20Image%202022-10-09%20at%209.46.35%20PM.jpeg"
-        alt="">
-
-
-    <p>
-
-<b>💥 Surat Accomodation 🏠 💥</b>
-<br>
-Salam-e-jameel,
-<br><br>
-<b>Je sagla Mumineen istifadah ilmiyah ya Aqa Mola tus ni Milaad waste 📍surat awana che ane 🏘️rooms/accomodation ni requirement hoe to niche 👇🏻 aapeli link par contact kare
-<br><br></b>
-        <b>Whatsapp us 👇</b><br>
-<a href="https://wa.me/+919033351880*?text=I%20want%20to%20know%20the%20Details%20about%20this.%20As%20i%20have%20saw%20your%20ad%20in%20DawoodiBohraApp."
-            target="_blank">Message us on Whatsapp.</a>
-<br><br>
-Shukran 💐
-<br><br>
-<b>📝 please note this are paid rooms on rent
-<br><br>
-    --------------------------------------<br>
-🪀 Join Our Whatsapp Groups for Offers and Details<br>
-<br>
- <a href="https://chat.whatsapp.com/FXHlHQ7whJq64lmIsGq7Ly">Join Group Now</a>
-        
-        </b>
-    </p>
-        <hr>
-    <img id="dba"
-        src="https://raw.githubusercontent.com/DawoodiBohraApp/DawoodiBohraNotification/main/WhatsApp%20Image%202022-10-15%20at%205.09.21%20PM.jpeg"
-        alt="">
-
-
-    <p>
-
-Kashmir Calling 😍<br><br>
-Don’t you want to enjoy a vacation in paradise?🏔️<br>
-Make it a luxury getaway anywhere in 𝐊𝐀𝐒𝐇𝐌𝐈𝐑!❄️<br>
- Pamper yourself with unmatched luxury.😍❄️<br>
-<br>
-𝐈𝐧𝐜𝐥𝐮𝐬𝐢𝐨𝐧𝐬:<br>
-<br>
-✅  Innova//XYLO Car Throughout the tour🚗<br>
-✅ Trip to Soanmarg // Gulmarg // Pahalgam<br>
-✅ Accommodation at 3* Premium Resorts 🛏️<br>
-✅ Daily breakfast 🥞 dinners🍲<br>
-✅ Sightseeing with guides 💼<br>
-✅ Free 1hour Shikara Ride @Dal Lake <br>
-✅ Airport transfers 🚌<br>
-✅ Internal Travel 🚘<br>
-<br>
-Kindly Call or DM us for details: <br>
-<br>
-Saif Holidays.in <br>
- 📞  <a href="tel:+919772031556"> +91 97720 31556</a><br>
-<br>
-
-<a href="mailto:Saiftravels110@gmail.com">Saiftravels110@gmail.com</a> 📧<br>
-        <br>
-Our location: 📍<br>
-Nai Abadi Banswara Rajasthan <br>
-Opposite Union Bank of India<br>
-<br>
-Whatsapp 🪀👇<br>
-<a href="https://wa.me/+919772031556*?text=I%20want%20to%20know%20the%20Details%20about%20this.%20As%20i%20have%20saw%20your%20ad%20in%20DawoodiBohraApp."
-            target="_blank">Message us on Whatsapp.</a>        
-        
-
-    </p>
-        <hr>
-       
-      <img id="dba"
-        src="https://raw.githubusercontent.com/DawoodiBohraApp/DawoodiBohraNotification/main/WhatsApp%20Image%202022-10-15%20at%2010.32.59%20AM.jpeg"
-        alt="">
-
-
-    <p>
-
-<b>Najmi - Silk House🥼
-<br><br>
-Readymade - Libas al Anwar</b>
-<br><br>
-Available:-<br>
-🔸 Saya Kurta Set<br>
-🔸 Kurta Pajama Set <br>
-🔸 Kids Set<br>
-🔸 Pehran<br>
-🔸 Susi Izar<br>
-<b>🔸 Retail and Whole Sale
-        <br><br>
-        Order Now
-<br><br>
-📝 Order will be taken  Online on Call
-        <br><br>
-Whatsapp Us  🪀  👇<br>
-<a href="https://wa.me/+918871412395*?text=I%20want%20to%20know%20the%20Details%20about%20this.%20As%20i%20have%20saw%20your%20ad%20in%20DawoodiBohraApp."
-            target="_blank">Message us on Whatsapp.</a>
-<br><br>
- 📱  <a href="tel:+918871412395"> +918871412395</a><br>
- 📱  <a href="tel:+918770675085"> +918770675085</a>
-<br>
-📍 Address:<br></b>
-Sethwala Complex, Roza Compound, Ujjain (M.P)<br>
-    
-    </p>
-        <hr>
-    
-     
-    
-    
-     <img id="dba"
-        src="https://raw.githubusercontent.com/DawoodiBohraApp/DawoodiBohraNotification/main/WhatsApp%20Image%202022-10-14%20at%207.05.45%20PM.jpeg"
-        alt="">
-
-
-    <p>
-<b>Aqa Maula TUS Photo 🖼️ with Wooden Frame</b>
-<br><br>
-Available in Sizes
-<br><br>
-🔸 20x30 inches<br>
-🔸 24x36 inches<br>
-🔸 30x40 inches<br>
-<br>
-<b>The Photo is on Textured Embossed Canvas and frame is of cp teak wood.<br>
-<br>
-We're providing best in-class designing services since 2019, serving customers across the globe 🌏</b>
-<br><br>
-We provide designing and printing services -<br>
-<br>
-1. Aqa Maula TUS portraits.<br>
-2. Canvas Prints and 3d Canvas Prints.<br>
-3. Premium Wood Products.<br>
-4. Business Logo and Branding (Business Cards , Brochure , social media posts etc.)<br>
-5. Wedding Cards / Birthday Cards / E-Invite Cards.<br>
-<br>
-Whatsapp 🪀👇<br>
-       <a href="https://wa.me/*+918668534464*?text=I%20want%20to%20know%20the%20Details%20about%20this.%20As%20i%20have%20saw%20your%20ad%20in%20DawoodiBohraApp."
-            target="_blank">Message us on Whatsapp.</a>
-<br>
-View our catalogue 👇<br>
-       <a href="https://wa.me/c/918668534464">https://wa.me/c/918668534464</a><br>
-<br>
-Instagram -👇🏻<br>
- <a href="https://www.instagram.com/mustafatanki/">https://www.instagram.com/mustafatanki/</a><br><br>
-        
-      
-
-    </p>
-        <hr>
-     <img id="dba"
-        src="https://raw.githubusercontent.com/DawoodiBohraApp/DawoodiBohraNotification/main/WhatsApp%20Image%202022-10-14%20at%2012.21.05%20PM.jpeg"
-        alt="">
-
-
-    <p>
-<b>🌿 Hatimi Herbal  🌿
-<br><br>
-Hatimi Herbal 🌿 works with raw, wild and Organic herbs to treat various health issues.</b>
-<br><br>
-We Provides Following 👇<br>
-🔹Herbal Consultancy<br>
-🔹Herbal products<br>
-🔹Herbal Treatments through Raw Herbs (Constituents)<br>
-🔹Herbal Treatments through Tinctures<br>
-🔹Herbal Treatments Through Essential oils<br>
-🔹Herbal Treatments through Aroma Therapy with oil Tinctures<br>
-🔹Herbal Treatments through Reflex Therapy with Herbal oil and Herbal Tinctures<br>
-🔹Herbal Treatments through Hot, cold and Solar Infusions<br>
-🔹Herbal Treatments through Poultice<br>
-🔹Herbal Treatments through Salve<br>
-🔹Wild craft Herbal Treatments<br>
-<br><b>
-Whatsapp 🪀 Group link👇<br>
-<a href="https://chat.whatsapp.com/JXZtK6XuE8s8M9CMtRE5KL">https://chat.whatsapp.com/JXZtK6XuE8s8M9CMtRE5KL</a><br><br>
-Contact us 👇<br>
-📞 <a href="tel:+918780416781"> +918780416781</a><br><br></b>
-       
-
-    </p>
-        <hr>
-    
-    <img id="dba"
-        src="https://raw.githubusercontent.com/DawoodiBohraApp/DawoodiBohraNotification/main/WhatsApp%20Image%202022-10-13%20at%201.27.19%20PM.jpeg"
-        alt="">
-
-
-    <p>
- <b> BHOL ENGINEERING CATERERS 👨🍳
-<br><br>
-Venue Marriage on Island 🏝️ surrounded by Sea, 🌊 just 15 Minutes way from Port.
-<br><br>
-🍱 Experience in CATERING Since Last 15 years
-<br><br>
-◼️Contact us for 💍 Marriages, Birthday 🎊 Party and all other events & Functions
-<br><br>
-Try our 😋 Butter Chicken and 🍴 Coal Raang Biryani
-<br><br>
-Ready & Fresh Food Delivery All Over India & Worldwide Too</b>
-
-
- <br>  <br> 
-Contact us on:  <br>
-📞 <a href="tel:+918169811395"> +918169811395</a><br>
-📞 <a href="tel:+918108981086"> +918108981086</a>
-<br><br>
-<b>Whatsapp 🪀👇</b><br>
-       <a href="https://wa.me/*+918169811395*?text=I%20want%20to%20know%20the%20Details%20about%20this.%20As%20i%20have%20saw%20your%20ad%20in%20DawoodiBohraApp."
-            target="_blank">Message us on Whatsapp.</a>
-        <br><br>
-        ---------------------------------<br>
-Bhol Engineering Corporation Government Recognised. Also giving Job Recruitment for Any European and Gulf Countries like Singapore, Canada, Saudi Arabia, Kuwait, Daresalaam and many other Countries.
-Government Licence Holder<br>
-Regd No B-578/MUM/PER/1000+/5/5400/99..
-    </p>
-        <hr>
-    
-   
-     <img id="dba"
-        src="https://raw.githubusercontent.com/DawoodiBohraApp/DawoodiBohraNotification/main/WhatsApp%20Image%202022-10-06%20at%2011.57.21%20AM.jpeg"
-        alt="">
-
-
-    <p>
- <b> 𝐁𝐔𝐑𝐇𝐀𝐍𝐈 𝐏𝐀𝐑𝐊 🏡
-<br><br>
-𝗔 𝗯𝗲𝗮𝘂𝘁𝗶𝗳𝘂𝗹 ❤️ 𝗥𝗲𝘀𝗼𝗿𝘁 ⛵ 𝗶𝗻 𝗣𝗮𝗻𝗰𝗵𝗮𝗴𝗮𝗻𝗶
-<br><br>
-𝗦𝗽𝗲𝗰𝗶𝗮𝗹𝗹𝘆 𝗳𝗼𝗿 𝗗𝗮𝘄𝗼𝗼𝗱𝗶 𝗕𝗼𝗵𝗿𝗮 𝗠𝘂𝗺𝗶𝗻𝗲𝗲𝗻</b>
-<br><br>
-Exciting offers for BURHANI PARK PANCHGANI. 
-<br><br>
-Door to Door Pick Up and Drop by your own private vehicle 🚗🚘 From Mumbai or Pune. 
-<br><br>
-Package includes:<br>
-1:   Pick up from your home in the morning and drop back at your home next evening. <br>
-2:   Refreshments at arrival.<br>
-3:   Siteseeing in Panchgani and Mahabaleshwar in your own Private car 🚙🚗<br>
-4:  Hightea in evening.    <br> 
-5 : Dinner  <br> 
-6 : Breakfast  <br> 
-7 : After breakfast siteseeing in Panchgani/ Mahabaleshwar and drop back to your home .
- <br>  <br> 
-Package cost from pune for Group of 4 person, Rs 3850-/ per person. 
- <br>  <br> 
-Package cost from Mumbai for Group of 4 person, Rs 4550-/ per person
- <br>  <br> 
-*GST Extra
- <br>  <br> 
-Package also available for large group
-
- <br>  <br> 
-For more info contact <br>
-📱 <a href="tel:+917499841164"> +917499841164</a>
-<br><br>
-<b>Whatsapp 🪀👇</b><br>
-       <a href="https://wa.me/*+917499841164*?text=I%20want%20to%20know%20the%20Details%20about%20this.%20As%20i%20have%20saw%20your%20ad%20in%20DawoodiBohraApp."
-            target="_blank">Message us on Whatsapp.</a>
-    </p>
-        <hr>
-    <img id="dba"
-        src="https://raw.githubusercontent.com/DawoodiBohraApp/DawoodiBohraNotification/main/WhatsApp%20Image%202022-10-12%20at%201.27.51%20PM.jpeg"
-        alt="">
-
-
-    <p>
-        
-आसान है स्वादिष्ट खाना बनाना MA'Spices के साथ।<br>
-And now to make it easier than before, here’s the recipe steps also mentioned by us.<br>
-Follow them and enjoy the yummiest special taste of the above mentioned delicacies.<br>
-
-<br><br>
-
-Contact us now to avail the opportunity.<br>
-
-            <a href="tel:+919998876461"> 📞: +919998876461</a><br>
-            <a href="mailto:sales@maspices.co.in">📧: sales@maspices.co.in</a><br>
-<a href="https://www.maspices.co.in"
-            target="_blank"> 🛒: www.maspices.co.in</a>
-<br><br>
-
-
-Whatsapp 🪀👇 <br>
-            <a href="https://wa.me/+919998876461*?text=I%20want%20to%20know%20the%20Details%20about%20this.%20As%20i%20have%20saw%20your%20ad%20in%20DawoodiBohraApp."
-            target="_blank">Message us on Whatsapp.</a><br><br>
-
-
-        
-  
-  </p>
-
-    <hr>
-    
-     
-     <center>
-<img id="dba"
-        src="https://raw.githubusercontent.com/DawoodiBohraApp/DawoodiBohraNotification/main/WhatsApp%20Image%202022-09-23%20at%2012.03.29%20PM.jpeg"
-        alt="">
-</center>
-
-
-    <p>
- <b>  💥 Diwali Vacation Tour 💥
-<br><br>
-RANGWALA 🚍 TOURS & TRAVELS SURAT
-<br><br>
-26 GAAM KATHIYAWAD ZIYARAT 🚍 TOUR </b>
-<br><br>
-<em> Gujarat na Duat multalaqin Ra ane hudud fozola Aq ni ZiyaratTour <em>
-<br><br>
-    
-📍SURAT  TO SURAT<br>
-📍AHMEDABAD To AHMEDABAD <br>
-📍DAYS  9<br>
-📍3×2 Bus 🚍
-<br><br>
-    <b> 📍Rs 3786💰 Only </b><br>
-<br>
-📅 DATE  24Oct 2022<br>
-📅 HIJRI   28 Rabi UL awwal<br>
-<br>
-Only Ticket  Fare  💰<br>
-BOOKING STARTED<br>
- <br>
-🪀 🪀 Contact 👇👇 <br>
-<a href="https://wa.me/+917878643110*?text=I%20want%20to%20know%20the%20Details%20about%20this.%20As%20i%20have%20saw%20your%20ad%20in%20DawoodiBohraApp."
-            target="_blank">Message us on Whatsapp.</a><br><br>
-
- <br>
-<b>Or call 📱 <br></b>
-📞: <a href="tel:+917878643110" style="text-decoration: none">+917878643110</a><br><br>
-
-    Ahmedabad  Thi joint thai sake che
-
-
- 
-
-
-
- 
-
-  </p>
-     <hr>
-   
-       <img id="dba"
-        src="https://raw.githubusercontent.com/DawoodiBohraApp/DawoodiBohraNotification/main/WhatsApp%20Image%202022-10-10%20at%202.27.24%20PM.jpeg"
-        alt="">
-
-
-    <p>
- HELLO 👋 <br>
-MY SELF SAKINA NITHAWAWALA <br>
-ASN (American Society Of Nutrition) CERTIFIED NUTRITIONIST
-<br><br>
-
-You are invited to join our<br>
-<b>FITNESS WORKSHOP</b>
-<br><br>
-Learn the truth about your body & how to fuel it right.These workshops are designed to educate attendees on various aspects of maintaining healthy eating habits & how to integrate this lifestyle into their own.
-
-<br><br>
-TO KNOW MORE ABOUT THIS WORKSHOP 
-
-
-<br><br>
-CONTACT 👇📞
-    <br><a href="tel:+919558885289"> +91 9558885289</a>
-<br><br>
-<b>🪀  Whatsapp 👇<br></b>
-<a href="https://wa.me/+919558885289*?text=I%20want%20to%20know%20the%20Details%20about%20this.%20As%20i%20have%20saw%20your%20ad%20in%20DawoodiBohraApp."
-            target="_blank">Message us on Whatsapp.</a><br>
-    </p>
-        <hr>
-     <img id="dba"
-        src="https://raw.githubusercontent.com/DawoodiBohraApp/DawoodiBohraNotification/main/WhatsApp%20Image%202022-10-09%20at%209.46.35%20PM.jpeg"
-        alt="">
-
-
-    <p>
-
-<b>💥 Surat Accomodation 🏠 💥</b>
-<br>
-Salam-e-jameel,
-<br><br>
-<b>Je sagla Mumineen istifadah ilmiyah ya Aqa Mola tus ni Milaad waste 📍surat awana che ane 🏘️rooms/accomodation ni requirement hoe to niche 👇🏻 aapeli link par contact kare
-<br><br></b>
-        <b>Whatsapp us 👇</b><br>
-<a href="https://wa.me/+919033351880*?text=I%20want%20to%20know%20the%20Details%20about%20this.%20As%20i%20have%20saw%20your%20ad%20in%20DawoodiBohraApp."
-            target="_blank">Message us on Whatsapp.</a>
-<br><br>
-Shukran 💐
-<br><br>
-<b>📝 please note this are paid rooms on rent
-<br><br>
-🪀 Join Our Whatsapp Groups for Offers and Details</b>
-<br>
-       <center> <a href="https://chat.whatsapp.com/CRPZNagESaeDX6YC86Qem1" style="text-decoration: none">Join Whatsapp Group</a></center>
-
-        
-
-    </p>
-        <hr>
-    -->
-     <!--
-    <center>
-         <video controls width="350" height="250">
-
-    <source src="https://raw.githubusercontent.com/DawoodiBohraApp/DawoodiBohraNotification/main/WhatsApp%20Video%202022-10-09%20at%205.23.45%20PM.mp4"
-            type="video/webm">
-</video></center>
-
-
-    <p>
-    <b>🏠 Aplite Green Stone Heritage 🏠</b>
-<br><br>
-Our proud householders  🏘️. <br>
-Be a part of the Aplite family today book your dream home 🏡 with an exciting 30/70 payment 💸 scheme 
-<br><br>
-For more details call us at <br>
-📱 <a href="tel:+919833364524" style="text-decoration: none">+919833364524</a><br><br>
-        
-<b>Whatsapp us 👇</b><br>
-<a href="https://wa.me/+919833364524*?text=I%20want%20to%20know%20the%20Details%20about%20this.%20As%20i%20have%20saw%20your%20ad%20in%20DawoodiBohraApp."
-            target="_blank">Message us on Whatsapp.</a><br><br>
-    </p>
-        <hr>
-     <img id="dba"
-        src="https://raw.githubusercontent.com/DawoodiBohraApp/DawoodiBohraNotification/main/WhatsApp%20Image%202022-10-09%20at%201.39.42%20PM.jpeg"
-        alt="">
-
-
-    <p>
-
-Baad Salaam il Jameel
- <br><br>
-<b>Zabihat for 5-Mangal 🐐</b><br>
-For Rabi-ul-Awwal 1444H
-<br><br>
-This month there are<br>
-5 Tuesdays and we Encourage Mumineen to perform Sadaqa Zabihats.
-<br><br>
-<b>🐐 Goat Zabihat $41.53<br>
-🐑 Sheep Zabihat $45.53</b>
-<br><br>
-We will be continuously doing Sadaqa and<br>
-Salawaat Zabihats every day for our patrons who live in places where it is difficult to do Zabihats.
-<br><br>
-Please log onto 🌐<a href="https://www.zabihat.co.ke">www.zabihat.co.ke</a><br>
-for all your Zabihat related requests.
-<br><br>
-ZABIHAT SIMPLIFIED 🐑
-  
-
-
-        
-
-    </p>
-        <hr>
-   
-     <img id="dba"
-        src="https://raw.githubusercontent.com/DawoodiBohraApp/DawoodiBohraNotification/main/WhatsApp%20Image%202022-10-08%20at%204.15.27%20PM.jpeg"
-        alt="">
-
-
-    <p>
-
-<b>💥𝗗𝗜𝗪𝗔𝗟𝗜 𝗗𝗛𝗔𝗠𝗔𝗞𝗔 𝗢𝗙𝗙𝗘𝗥 💥</b>
-<br><br>
-Save the Date 🗓️<br>
-23rd Oct 2022
-<br><br>
-<b>𝐆𝐎𝐋𝐃𝐄𝐍 🪙 𝐂𝐈𝐓𝐘 𝐉𝐀𝐈𝐒𝐀𝐋𝐌𝐄𝐑 𝐆𝐑𝐎𝐔𝐏 𝐓𝐎𝐔𝐑<br>
-🧳 𝟒 𝐍𝐢𝐠𝐡𝐭𝐬 & 𝟑 𝐃𝐚𝐲𝐬 𝐏𝐚𝐜𝐤𝐚𝐠𝐞</b>
-<br><br>
-🔹Quard Sharing 8700/- Rs<br>
-🔹Triple Sharing 9200/- Rs<br>
-🔹Double Sharing 10200/-
-<br><br>
-<b>𝗖𝗢𝗡𝗙𝗜𝗥𝗠 𝗕𝗢𝗢𝗞𝗜𝗡𝗚 </b>provides a complete solution for Holiday packages, group tour & international Packages & Tours
-<br><br><b>
-🏔️ 𝙎𝙝𝙞𝙢𝙡𝙖 - 𝙈𝙖𝙣𝙖𝙡𝙞<br>
-🏔️ 𝙆𝙖𝙨𝙝𝙢𝙞𝙧<br>
-🏖️ 𝙂𝙊𝘼<br>
-🚞 𝙆𝙚𝙧𝙖𝙡𝙖</b>
-<br><br>
-For more info contact<br>
-Follow @confirmbooking<br>
-<br>
-Contact us 👇<br>
-📱  <b><a href="tel:+918866515252"> +918866515252</a></b>
-
-<br><br>
-<b>🪀  Whatsapp 👇</b><br>
-<a href="https://wa.me/+918866515252*?text=I%20want%20to%20know%20the%20Details%20about%20this.%20As%20i%20have%20saw%20your%20ad%20in%20DawoodiBohraApp."
-            target="_blank">Message us on Whatsapp.</a><br></b>
-        
-
-    </p>
-        <hr>
-    <img id="dba"
-        src="https://raw.githubusercontent.com/DawoodiBohraApp/DawoodiBohraNotification/main/WhatsApp%20Image%202022-10-08%20at%202.24.52%20PM.jpeg"
-        alt="">
-
-
-    <p>
-
-<center><b> RAPID CONTRUCTION 
-<br><br>
-🏬 MODERN FLAT FOR SALE </b></center>
-<br><br>
-📍AT NERAL EAST NEAR RAILWAY STATION
-<br><br>
-<b>♦️ PHASE 1, PHASE 2, PHASE 3
-<br><br>
-♦️ PHASE 1<br>
-Ready to Live Flat<br></b>
-🔹 9 Buildings / Ground + 3<br>
-🔹 1 Room<br>
-🔹 Common Washroom and Latrine<br>
-🔹 1 Furnished Kitchen <br>
-🔹 2 Balcony<br>
-🔹 2 Side Road Facing<br>
-🔹 24 Hours Sweet Water<br>
-🔹 Fully Ventilated & Sun lighted House
-<br><br>
-<b>♦️ PHASE 2<br>
-Semi Furnished, Ready to Live Flat<br></b>
-🔹 16 Buildings / Ground + 3<br>
-🔹 1 Room Kitchen<br>
-🔹 1 Bedroom Hall Kitchen<br>
-🔹 Common Washroom and Latrine<br>
-🔹 24 Hours Sweet Water<br>
-🔹 Fully Ventilated & Sun lighted House<br>
-<br>
-<b>♦️ PHASE 3<br>
-Well Furnished, Ready to Live Flat<br></b>
-🔹 Swimming Pool <br>
-🔹 Playing Area<br>
-🔹 Club House
-<br><br>
-📍 ' 5 - 10 Minutes ’ Walking Distance from Neral Railway Station 🚉 
-<br><br>
-<b>🏬 ADDRESS:<br></b>
-RAPID CONTRUCTION,<br> 
-NERAL EAST, NEAR RAILWAY CROSSING, INDIA
-<br><br>
-
-FOR DEMAND & FURTHER DETAILS FEEL FREE TO CONTACT:<br>
-CALL/SMS/WHATSAPP<br>
-<b>📱 <a href="tel:+919867555781"> +919867555781</a></b>
-    <br><br>
-<b>🪀  Whatsapp 👇</b><br>
-<a href="https://wa.me/+919867555781*?text=I%20want%20to%20know%20the%20Details%20about%20this.%20As%20i%20have%20saw%20your%20ad%20in%20DawoodiBohraApp."
-            target="_blank">Message us on Whatsapp.</a><br></b>
-        
-
-    </p>
-        <hr>
- 
-    
-    
-      <img id="dba"
-        src="https://raw.githubusercontent.com/DawoodiBohraApp/DawoodiBohraNotification/main/WhatsApp%20Image%202022-10-07%20at%207.51.22%20PM%20(1).jpeg"
-        alt="">
-
-
-    <p>
-        
-
-
-
-Salam,
-
-🚩 <b>RAJ TOURS 🧳 AND TRAVEL MUMBAI 🚩<br><br>
-Upcoming groups<br></b>
- -------------------------<br>
-🚩Umrah via Misr transit ziyarat 1 day<br>
-◼️13 days tour<br>
-◼️Departure date 10 nov from Mumbai.<br>
-💰 Cost: 1,18,553/- per person approx.<br>
-Includes: <br>
-◼️2 umrah <br>
-◼️Visa tickets faize lawazim.<br>
-◼️Group as per faize nizam.<br>
---------------------------<br>
-🚩Karbala Najaf 10 days tour.<br>
-◼️12 & 19 Nov<br>
-◼️20 & 24 Dec<br>
-◼️Hotel stay food in faize.<br>
-💰 Cost: 86,000/- per person approx. . . .<br>
-◼️Any increase in dollar or Saudi riyals rate difference will be collected <br>
---------------------------<br><br>
-
-        
-        📱 Contact on<br>
-<a href="tel:+919768114452"> +919768114452 </a> 🌟<br>
-        <a href="tel:+919930988231"> +919930988231</a> 🌟<br><br>
-<b>
-Whatsapp 🪀👇 <br>
-            <a href="https://wa.me/+919768114452*?text=I%20want%20to%20know%20the%20Details%20about%20this.%20As%20i%20have%20saw%20your%20ad%20in%20DawoodiBohraApp."
-            target="_blank">Message us on Whatsapp.</a><br><br>
-</b>
-
-        
-  
-  </p>
-
-    <hr>
-    <center>
-         <video controls width="250" height="350">
-
-    <source src="https://github.com/DawoodiBohraApp/DawoodiBohraNotification/raw/main/VID-20220921-WA0006.mp4"
-            type="video/webm">
-</video></center>
-
-
-    <p>
-  <b>INVESTMENT💰 OPPORTUNITY FOR MUMINEEN<br>
-FULLY SHARIA COMPIANT<br><br>
-
-INVEST 💰 RS 5 LAKHS & BECOME OUR PARTNER IN GROWTH</b>
-<br><br>
-🔹We are pleased to offer a <b>halal investment avenue to Mumineen</b>.🔹<br>
-Highfield Ventures LLP is a company with the objective to invest in properties to earn capital appreciation for its investor. <br>
-<br>
-🔹 Property Details: 🔹
-<br><br>
-◼️Property Location - Trimulgherry , Secunderabad<br>
-◼️Google Location - <a href="https://goo.gl/maps/Y4GvFGvA7aBc6xmi8" style="text-decoration: none">https://goo.gl/maps/Y4GvFGvA7aBc6xmi8</a>
-◼️Name of project - LAKE HEAVEN<br>
-◼️Total Area - 3600 sq. ft.<br>
-◼️Total Property Price - Rs. 8CR<br>
-◼️Buyers - Mumineen<br>
-◼️Expected Return on Investment in total - Up to 30%<br>
-◼️Tenure of Investment - 27 months + 3 months fund raising <br>
-◼️Investment required - Multiples of Rs. 5 lac
-<br><br>
-If interested please fill the below form<br>
-<a href="https://forms.gle/94S7bawiV2GzeWQY7" style="text-decoration: none">https://forms.gle/94S7bawiV2GzeWQY7</a>
-<br>
-<br>
-◼️ FOR ANY CLARIFICATION FEEL FREE TO CONTACT ON <a href="tel:+919342572073" style="text-decoration: none">+919342572073</a><br><br>
-
-<b> Whatsapp 🪀👇<br></b>
-<a href="https://wa.me/+919342572073*?text=I%20want%20to%20know%20the%20Details%20about%20this.%20As%20i%20have%20saw%20your%20ad%20in%20DawoodiBohraApp."
-            target="_blank">Message us on Whatsapp.</a><br><br>
-
-
- 
-
-  </p>
-    
-    
-        <hr>
-     <center>
-         <video controls width="350" height="250">
-
-    <source src="https://raw.githubusercontent.com/DawoodiBohraApp/DawoodiBohraNotification/main/WhatsApp%20Video%202022-10-07%20at%2011.33.09%20AM.mp4"
-            type="video/webm">
-</video></center>
-
-
-    <p>
-
-<b>𝗦𝗔𝗠𝗦 𝗛𝗢𝗡𝗘𝗬 🍯
-<br><br>
-𝟏𝟎𝟎% 𝐏𝐮𝐫𝐞 & 𝐍𝐚𝐭𝐮𝐫𝐚𝐥 𝐇𝐨𝐧𝐞𝐲 🍯</b>
-<br><br>
-💥 SAMS Mental Health Tonic 💥
-<br><br>
-Helps in reducing<br>
-☑️Stress<br>
-☑️Depression<br>
-☑️anxiety<br>
-☑️Tension<br>
-☑️Mood swing
-<br><br>
-Honey available for:<br>
-🍯 Quran Hifz<br>
-🍯 Tonic for Stress/ Depression etc<br>
-🍯 Diabetes/BP/ Cholestrol<br>
-🍯 Weight loose<br>
-🍯 Migraine Relief<br>
-🍯 Cold and cough<br>
-🍯 Pain Relief<br>
-🍯 Digestion Relief<br>
-🍯 Arthritis<br>
-🍯 Dry fruits Honey<br>
-🍯 Fruits Honey<br>
-🍯 Pure Honey with Kalonji<br>
-🍯 Honey for PCOD/PCOS<br>
-🍯 Chocolate Honey<br>
-🍯 Stone Honey<br>
-🍯 And many other verities
-<br><br>
-Delivery 🚚 all over India🇮🇳
-<br><br>
-To order click below 👇
-<br><br>
-    <a href="https://tinyurl.com/BuySamshoney" target="_blank">https://tinyurl.com/BuySamshoney</a>
-
- <hr>
-   
-   
-
-     
-      
-     
-     <img id="dba"
-        src="https://raw.githubusercontent.com/DawoodiBohraApp/DawoodiBohraNotification/main/WhatsApp%20Image%202022-10-05%20at%206.37.47%20PM.jpeg"
-        alt="">
-
-
-    <p>
-
-   Become a Certified Expert for the No.1 Highest Demand Skill of 2022.
-<br><br>
-Digital Marketing Mastery 6 Days Live Workshop.
-<br><br>
-Batch: 12th October to 17th October<br>
-Time: 8 Pm - 8:40 Pm<br>
-Live: On zoom<br>
-Fees: 499
-<br><br>
-This is an action-based workshop. You will learn step by step -<br>
-✅ Day 1 - Introduction and Opportunity in Digital Marketing.<br>
-✅ Day 2 - Creating Website with Domain and Hosting on WordPress.<br>
-✅ Day 3 - Search Engine Optimization and Google Ads.<br>
-✅ Day 4 - Social Media Marketing<br>
-✅ Day 5 - Email Marketing & Automation<br>
-✅ Day 6 - 10X Growth Hack Tools, Tips and Formula.
-<br><br>
-Highlights:<br>
-🔷 Assignments<br>
-🔷 Q & A sessions<br>
-🔷 5+ Certificates
-<br><br>
-🎁 Bonuses:<br>
-1. Lifetime VIP Community Membership<br>
-2. Handholding support for 6 Days<br>
-3. eBooks and Tools worth Rs 10K.
-<br><br>
- <em> 100% Satisfaction Guaranteed.  </em> 
-<br><br>
-Registration Link-<br>
-        <a href="https://burhandigital.mojo.page/6-day-digital-marketing-mastery-workshop"> Register Now</a></b><br>
-
-<br>
-For more details - <br>
-    <b>🪀  Whatsapp 👇</b><br>
-<a href="https://wa.me/+919025306175*?text=I%20want%20to%20know%20the%20Details%20about%20this.%20As%20i%20have%20saw%20your%20ad%20in%20DawoodiBohraApp."
-            target="_blank">Message us on Whatsapp.</a><br><br>
-📞 <b><a href="tel:+919025306175"> +919025306175</a></b><br>
-    
-Burhan Digital,<br>
-Pune.<br>
-    <b> --------------------- </b><br>
-    <b>Join our Whatsapp Group</b> for More Details and Offers:<br>
-<a href="https://chat.whatsapp.com/FqFSD1XH3gyL6RTegplS4S"> Join Whatsapp Group</a></b><br>
-
-
-        <br>
-
-
-
-        
-
-    </p>
-        <hr>
-
-    <img id="dba"
-        src="https://raw.githubusercontent.com/DawoodiBohraApp/DawoodiBohraNotification/main/WhatsApp%20Image%202022-10-05%20at%2011.29.13%20AM.jpeg"
-        alt="">
-
-
-    <p>
-<b>
-    NAJMI ESTATES 🏘️ PUNE
- <br> <br>
-◼️ HIGH STREET (THE ARK) SHOWROOM ON NIBM ROAD. 350sqft CARPET (50% LOADING) PRICE 1.45 Cr NOT NEG.
- <br> <br>
-◼️ DISTRESS SALE SHOP IN ROYAL HERITAGE MALL (NIBM ROAD) FIRST FLOOR. AREA 890 SQFT. FINAL PRICE 75 LACS
- <br> <br>
-◼️ ROAD TOUCH SHOP FULLY FURNISHED IN KONDHWA (KHURD) AREA 650 SQFT. PRICE 95 LACS.  INCOMING RENT 60,000 PER MONTH FOR LOCKIN 3 YEARS
- <br> <br>
-◼️ 300 SQFT FULLY FURNISHED OFFICE ON HEAVY DEPOSIT OF 12 LACS AND ZERO RENT IN BIZZBAY MALL NIBM ROAD
- <br> <br>
-◼️ 350 SQFT SHOP IN KPCT MALL ON HEAVY DEPOSIT OF 15 LACS AND ZERO RENT
- <br> <br>
-◼️ OFFICE FOR SALE IN BIZZBAY MALL. AREA 235 SQFT FURNISHED. FINAL PRICE 36LACS
- <br> <br>
-◼️ 2BHK FLAT FOR SALE IN UNITY PARK KONDHWA MITHANAGAR 39 LACS NOT NEG 
- <br> <br>
-CONTACT 👇🏻<br>
-📞 <b><a href="tel:+917666709219"> +917666709219</a></b><br>
-        <br>
-
-</b>
-<b>🪀  Whatsapp 👇</b><br>
-<a href="https://wa.me/+917666709219*?text=I%20want%20to%20know%20the%20Details%20about%20this.%20As%20i%20have%20saw%20your%20ad%20in%20DawoodiBohraApp."
-            target="_blank">Message us on Whatsapp.</a><br>
-        
-
-    </p>
-        <hr>
-  
-     <img id="dba"
-        src="https://raw.githubusercontent.com/DawoodiBohraApp/DawoodiBohraNotification/main/WhatsApp%20Image%202022-10-04%20at%207.13.41%20PM.jpeg"
-        alt="">
-
-
-    <p>
-<b>💥 Jammu & Kashmir 9 days @ Rs 10,999/- Only 💥</b>
-<br><br>
-IN THIS WINTER EXPLORE 🌠<br>
-<b>🏕 JAMMU & KASHMIR- 9 DAYS🏞🏔</b><br>
-<br>
-💥 ONLY IN <b>Rs 10999/-💥 (WITH 3 STAR CENTRALY HEATED HOTELS AND HOUSEBOAT)<br>
-TRAIN TICKETS INCLUDED</b><br>
-Book your seat now.<br>
-<br>
-✅ Travel date <b>09-DEC-2022</b><br><br>
-<br>
-INCLUSION<br>
-🔸 3 night stay in SRINAGAR<br>
-🔸 1 night STAY IN dal lake houseboat <br>
-🔸 1 night stay in pahalgam (with dj & bonfire)<br>
-🔸 1 night stay in jammu<br>
-🔸 6 breakfast and 6 dinner<br>
-🔸 2 way train tickets<br>
-(from- indore, ujjain, dewas, surat, ratlam, mumbai, bhopal, dahod, vadodra,)<br>
-🔸all tour and transfer by centraly heated tempo traveller<br>
-🔸 free 1 hour shikara ride in dal lake<br>
-<br>
-Exclusion<br>
-🔹lunch<br>
-🔹any personal expenses<br>
-🔹any entry tickets or activities like- khajjar ride- gondola cable car etc.<br>
-🔹aru valley- chandan wadi  sightseeing local union cab in pahalgam<br>
-<br>
-sightseeing include- srinagar-gulmarg-sonmarg-pahalgam local-dallake and many more<br>
-<br>
-for detail itinerary<br>
-dm us-  <a href="https://instagram.com/taqdeerholidays?igshid=YmMyMTA2M2Y="> @taqdeerholidays</a><br>
-or call us-<br>
-📞 <b><a href="tel:+917014789907"> +917014789907</a></b><br>
-        <br>
-
-
-<b>🪀  Whatsapp 👇</b><br>
-<a href="https://wa.me/+917014789907*?text=I%20want%20to%20know%20the%20Details%20about%20this.%20As%20i%20have%20saw%20your%20ad%20in%20DawoodiBohraApp."
-            target="_blank">Message us on Whatsapp.</a><br>
-
-
-    </p>
-        <hr>
-    <img id="dba"
-        src="https://raw.githubusercontent.com/DawoodiBohraApp/DawoodiBohraNotification/main/WhatsApp%20Image%202022-10-04%20at%202.01.25%20PM.jpeg"
-        alt="">
-
-
-    <p>
-  <b>BURHANI SERVICES 🚘
-<br><br>
-♦️ 🇮🇳 ALL INDIA TOUR</b>
-<br><br>
-🌟 Comfortable Cars <br>
-🌟 Small / Big Cars<br>
-🌟 Safe & Trusted Drivers<br>
-🌟 Affordable Rates
-<br><br>
-<b>♦️ CARS AVAILABLE: </b><br>
-➡️ Ertiga<br>
-➡️ Innova<br>
-➡️ Swift<br>
-➡️ Tavera<br>
-➡️ Winger<br>
-➡️ Minibus<br>
-➡️ Mahindra Marazzo
-<br><br>
-<b>♦️ AVAILABLE FOR:</b><br>
-✅ Surat to Mumbai<br>
-✅ Surat to Ahmedabad <br>
-✅ Airport Drop & Pickup<br>
-✅ One Day Picnic<br>
-✅ Wedding<br>
-✅ All India Tour, etc.
-<br><br>
-<b>🔖  BOOK NOW</b>
-<br><br>
- <b>CONTACT 👇👇</b><br>
- Kaizar Bhai Tapia<br>
-📱 <a href="tel:+919825187295"> +919825187295</a><br>
-📱 <a href="tel:+916352901517"> +916352901517</a>
-<br><br>
-
-
-<b>🪀  Whatsapp 👇</b><br>
-<a href="https://wa.me/+919825187295*?text=I%20want%20to%20know%20the%20Details%20about%20this.%20As%20i%20have%20saw%20your%20ad%20in%20DawoodiBohraApp."
-            target="_blank">Message us on Whatsapp.</a><br>
-
-
- <b>------------------------ </b><br>
-<b>Join Whatsapp Group</b> for more Detail and Offers<br>
-
-<a href="https://chat.whatsapp.com/LHEc5ySeSgSDY6TzciDGlk"> Join Group NOW </a>
-        
-
-
-    </p>
-        <hr>
- 
--->
-    <!--
-    <img id="dba"
-        src="https://github.com/DawoodiBohraApp/DawoodiBohraNotification/raw/main/WhatsApp%20Image%202022-10-03%20at%204.10.50%20PM.jpeg"
-        alt="">
-
-
-    <p>
-  <b>⛱️ SAIF HOLIDAYS
-<br><br>
-🏖️ Bali is always a good idea.💡
-<br><br>
-💥 6 days package for Bali just @Rs 28999/- per person 💥</b>
-<br><br>
-Inclusions: 👇👇<br>
-◼️ Airport ✈️ Pick & Drop in a SUV on Private basis <br>
-◼️ 3 Nights in Kuta & 2 Nights in Ubud (pool 🥽 villa)<br>
-◼️ Daily Breakfast 🍞 at the resort/hotel <br>
-◼️Welcome with 💐 Flower Garland upon arrival <br>
-◼️Driver cum tour guide during the tour <br>
-◼️All entrance fees + Local Taxes, parking and toll charges <br>
-◼️Daily dinner (VEG) at Indian restaurant with transfers 
-<br><br>
-💥 Sightseeing - Water Sports // Uluwatu Temple Tour // Bali Zoo // Kintamani + Coffee Plantation + Tegenungan Waterfall + Tegalalang Rice Terrace + Bali Swing // HD Tanah Lot Sunset Tour 💥
-<br><br>
-👉🏻1 Lunch @Bali Swing <br>
-👉🏻Unlimited Fun 😊<br>
-<br>
-Contact us 👇🏻<br>
-📞 <a href="tel:+919772031556"> +91 97720 31556</a><br>
-📩  <a href="mailto:Saiftravels110@gmail.com">Saiftravels110@gmail.com</a><br>
-<br>
-🪀  Whatsapp 👇<br>
-<a href="https://wa.me/+919772031556*?text=I%20want%20to%20know%20the%20Details%20about%20this.%20As%20i%20have%20saw%20your%20ad%20in%20DawoodiBohraApp."
-            target="_blank">Message us on Whatsapp.</a><br>
-    </p>
-        <hr>
+        <ul>
+            <li><a href="https://dawoodibohraapp.github.io/DawoodiBohraNotification/"><i
+                        class="fa-regular fa-bell fa-lg"></i></a></li>
+            <li><a href="https://dawoodibohraduas.page.link/Whatsapp"><i class="fa-brands fa-whatsapp fa-lg"></i></a>
+            </li>
+            <li><a href="#"><i class="fa-solid fa-share-nodes fa-lg"></i></a></li>
+            <li><a href="https://www.youtube.com/channel/UC_bilO1a57nAhUWSk4dzndQ"><i
+                        class="fa-brands fa-youtube fa-lg"></i></a></li>
+            <li><a href="https://www.instagram.com/dawoodibohraapp/?hl=en"><i
+                        class="fa-brands fa-instagram fa-lg"></i></a></li>
+        </ul>
+    </nav>
+
+
+    <!-- <ul>
+        <div id="logo">
+            <li id="logoname">Dawoodi Bohra App</li>
+        </div>
+
+        <div id="icons">
+            <li id="ll"><a id="bell" href="https://dawoodibohraapp.github.io/DawoodiBohraNotification/"><i
+                        class="fa-regular fa-bell"></i></a></i></li>
+            <li id="ll"><i class="fa-brands fa-whatsapp"></i></li>
+            <li id="ll"><i class="fa-solid fa-share-nodes"></i></li>
+            <li id="ll"><i class="fa-brands fa-youtube"></i></li>
+            <li id="ll"><i class="fa-brands fa-instagram"></i></li>
+            <li id="ll"><i class="fa-regular fa-message-lines"></i></li>
+        </div>
+
+
+    </ul> -->
+    <iframe id="qiyam" src="https://dawoodibohraapp.github.io/QiyaamShareefNew/" frameborder="0"></iframe>
+
+
+
+    <div id="container">
+        <!-- ------------------------------------------ Hijri DATE---------------------------------- -->
+        <div id="hijrig">
+            <span>Hijri</span><br>
+            <div class="spacer"></div>
+            <p id="hdate"></p><br>
+            <img id="green" src="green.png" alt="">
+        </div>
+
+
+        <!-- --------------------------------------English Date--------------------------------------- -->
+
+        <div id="englishg">
+            <span> ENGLISH</span><br>
+            <div class="spacer"></div>
+            <p id="date"></p><br>
+            <img id="green" src="green.png" alt="">
+        </div>
+
+
+    </div>
+
+
+    <div class="container">
+
+
+
+
+
+        <!-- <h1 id="heading">Dawoodi Bohra App</h1> -->
+
+
+
+        <!-- <div class="align"> -->
+        <a href="live majlis.html"><img id="img1" class="img" src="drawable-xxhdpi/newlive.webp" alt="LiveMajlis"></a>
+
+        <a href="Quran/QuranActivity.html"><img id="img2" class="img" src="drawable-xxhdpi/newquran.webp"
+                alt="Quran"></a>
+        <a href="Duas.html"> <img id="img3" class="img" src="drawable-xxhdpi/newdua.webp" alt="Duas"></a>
+
+        <!-- </div> -->
+
+        <a href="Friday hafti.html"> <img id="img5" class="img" src="drawable-xxhdpi/newjumua.webp"
+                alt="FridayHafti"></a>
+        <a href="Monthly Duas.html"> <img id="img4" class="img" src="drawable-xxhdpi/monthlyibaadat.webp"
+                alt="MonthlyDuas"></a>
+        <a href="Daily Ibadaat.html"> <img id="img4" class="img" src="drawable-xxhdpi/dailyibaadat.webp"
+                alt="DailyDuas"></a>
+        <img id="img6" class="img" src="drawable-xxhdpi/newmazaraat.webp" alt="Mazaarat">
+        <a href="https://dawoodibohraapp.github.io/tasbeeh/"><img id="img7" class="img"
+                src="drawable-xxhdpi/newtasbih.webp" alt="Tasbeeh"></a>
+        <a href="Tasbhi counter.html"> <img id="img8" class="img" src="drawable-xxhdpi/newtasbihcounter.webp"
+                alt="Tasbeeh Counter"></a>
+        <img id="img9" class="img" src="drawable-xxhdpi/newyahussain.webp" alt="Ya Hussain Tasbeeh">
+        <a href="Namaz/namaz/namaz.html"><img id="img10" class="img" src="drawable-xxhdpi/newnamaz.webp"
+                alt="Namaz"></a>
+        <a href="Qibla compass.html"><img id="img11" class="img" src="drawable-xxhdpi/newcompass.webp"
+                alt="Qibla Compass"></a>
+        <a href="Hijri calender.html"> <img id="img12" class="img" src="drawable-xxhdpi/newhijri.webp"
+                alt="Hijri Calendar"> </a>
+        <img id="img13" class="img" src="drawable-xxhdpi/newmarasiya.webp" alt="Marasiya">
+        <img id="img14" class="img" src="drawable-xxhdpi/zikrehsn.webp" alt="Zikre Hussain">
+        <a href="Radio.html"> <img id="img15" class="img" src="drawable-xxhdpi/newradio.webp" alt="Radio"> </a>
+        <img id="img16" class="img" src="drawable-xxhdpi/newnasihat.webp" alt="Nasihat">
+        <img id="img17" class="img" src="drawable-xxhdpi/newmadeh.webp" alt="Madeh">
+        <img id="img18" class="img" src="drawable-xxhdpi/newsalam.webp" alt="Salaam">
+        <img id="img19" class="img" src="drawable-xxhdpi/newmunajaat.webp" alt="Munajaat">
+        <img id="img20" class="img" src="drawable-xxhdpi/newqasida.webp" alt="Qasida">
+        <img id="img21" class="img" src="drawable-xxhdpi/newilteja.webp" alt="Ilteja">
+        <img id="img22" class="img" src="drawable-xxhdpi/newdaris.webp" alt="Daris">
+        <img id="img23" class="img" src="drawable-xxhdpi/newraudat.webp" alt="Raudat Hidayaat">
+        <img id="img24" class="img" src="drawable-xxhdpi/newbusaheba.webp" alt="Busaheba Sahifa">
+        <img id="img25" class="img" src="drawable-xxhdpi/newsadaqah.webp" alt="Sadaqah">
+        <img id="img26" class="img" src="drawable-xxhdpi/newfateha.webp" alt="Fateha">
+        <img id="img27" class="img" src="drawable-xxhdpi/newmithi.webp" alt="Mithi Shitabi">
+
+    </div>
+        <div id="spacer"></div>
+        <nav class="nav">
+            <a href="index.html" class="nav__link nav__link--active">
+                <i class="material-icons nav__icon">home</i>
+                <span class="nav__text">Home</span>
+            </a>
+            <a href="Namaz/namaz/namaz.html" class="nav__link">
+                <i class="material-symbols-outlined nav__icon">timer</i>
+                <span class="nav__text">Namaaz</span>
+            </a>
+            <a href="Hijri calender.html" class="nav__link">
+                <i class="material-icons nav__icon">calendar_today</i>
+                <span class="nav__text">Calendar</span>
+            </a>
+            <a href="Radio.html" class="nav__link">
+                <i class="material-icons nav__icon">radio</i>
+                <span class="nav__text">Radio</span>
+            </a>
+            <!-- <a href="#" class="nav__link">
+                <i class="material-icons nav__icon">settings</i>
+                <span class="nav__text">Settings</span>
+            </a> -->
+        </nav>
 
     
 
+    <script src="hijrisc.js"></script>
 
-
-
-<img id="dba"
-        src="https://raw.githubusercontent.com/DawoodiBohraApp/DawoodiBohraNotification/main/WhatsApp%20Image%202022-09-30%20at%201.01.20%20PM.jpeg"
-        alt="">
-    <p>
-<b>Alwaan e Khass </b>
-🥡🥬🌶️🌽🍗🥩🍲🍞🥡
-<br><br>
-<b>ISTEFADA 1444 MENU</b>
-<br><br>
-Coming to ISTEFADA in Surat? And Need Delicious <b>HOMEMADE</b> items?<br>
-Alwaan e Khass got you covered.<br>
-<br>
-➡️ We Provide <b>Delicious HOMEMADE (Fresh and Halal) </b>items. (Made by Father & Son). 🌶️🥬🍗
-<br><br>
-➡️ Cloud Kitchen. 🔪
-<br><br>
-➡️ In <b>Hygienic</b> Disposable Containers. 🥡
-<br><br>
-➡️ Taking <b>Small and Bulk Quantity Orders. </b>📦
-<br><br>
-➡️  <b>Home Delivery, Fast Delivery, Free Delivery</b> ( All Over <b>Surat</b> : 11am to 2am) 🚚
-<br><br>
-➡️ Different Menu Everyday.
-<br><br>
-💫 SPECIALIST IN:
-<br><br>
-✨ SHAWARMA 🌯<br>
-✨ CHICKEN BURGER 🍔 <br>
-✨ NAANCHAP 🌭
-<br><br>
-And <b>Many More...</b><br>
-<br>
-        <b>
-📱 CONTACT:<br>
- <a href="tel:+918460461953"> +918460461953</a>
-<br><br>
-<b>Whatsapp 🪀👇</b><br></b>
-       <a href="https://wa.me/*+918460461953*?text=I%20want%20to%20know%20the%20Details%20about%20this.%20As%20i%20have%20saw%20your%20ad%20in%20DawoodiBohraApp."
-            target="_blank">Message us on Whatsapp.</a>
-<br>
---------------------------------<br>
-<b>Join Whatsapp Group </b>for everyday Menus and Offers👇🏻<br>
-<br>
- <a href="https://chat.whatsapp.com/LGkJdLWYpsDAEdBiDTioS4">Join Whatsapp Group</a><br>
-        <hr>
-  -->
- 
-   <!--
-  
-    
-    <center>
-         <video controls id="v">
-
-    <source src="https://github.com/DawoodiBohraApp/DawoodiBohraNotification/raw/main/WhatsApp%20Video%202022-09-27%20at%202.10.50%20PM.mp4"
-            type="video/webm">
-</video></center>
-    
-
-
-
-    <p>
-        <b> Dawoodi Bohra Township 🏘️ Project in 📍PUNE </b>
-<br><br>
- <a href="https://youtu.be/9IWgLuMKVIY"> https://youtu.be/9IWgLuMKVIY</a>
-<br><br>
- <b> Hatimi Hills  </b> is a Dawoodi Bohra township project situated in Pune. It is a 12.5 acres project surrounded by lush greenery forest area and open land.
-<br><br>
-It's one in a kind of project near walking Distance from Kalimi Masjid and MSB School.
-<br><br>
-• Booking started for ﻿1 / 2 / 3 BHK Apartments, Row Houses and PentHouse, Shop / Offices in Pune. 
-<br><br>
-• Project with all Modern Amenities like Garden, Clubhouse, Swimming Pool, Open Gym
-<br><br>
-• Markaz or Masjid
-<br><br>
-• Payment EMI Facility available. Special Investors Offers.
-<br><br>
-• Dmart, Mall, International Schools, Entertainment Areas and Shopping Complex nearby
-<br><br>
-Call for Best Prices and Current Offers
-<br><br>
- <b>53Acres 📞 </b>
-<br>
-<a href="tel:+918888537777"> +918888537777</a><br>
-<a href="tel:+919029193521"> +919029193521</a><br>
-<br>
-🌐 <a href="https://www.53acres.com">53acres.com</a><br>
-<br>
-  <b>WhatsApp 🪀👇 <br>
-  <a href="https://www.53acres.com/wap" style="text-decoration: none">53acres.com/wap</a>
-<br>
- YouTube channel  <a href="https://www.53acres.com/ytb" style="text-decoration: none">53acres.com/ytb</a> <br>
-<br>
- Address <br></b>
- Shop no 15, Gulmohar Habitat, Salunke Vihar Road, Wanowri, Pune 411040<br>
-<br>
- <a href="https://www.53acres.com/Add" style="text-decoration: none">53acres.com/Add</a>
-    </p>
-
-        
-         <hr>
--->
-    <!--
-    <center>
-    <img id="dba"
-        src="https://raw.githubusercontent.com/DawoodiBohraApp/DawoodiBohraNotification/main/WhatsApp%20Image%202022-09-26%20at%206.04.35%20PM.jpeg"
-        alt="">
-
-
-    <p>
-        <b>
-   HASAN COLLECTION 🛒
-<br><br>
-💥 MILAAD OFFER💥
-<br><br>
-BUY 2 Topis GET 1 Topi FREE </b>
-<br><br>
-        <em> VALID till 7th Oct 2022</em>
-<br><br>
-📱 Contact: <a href="tel:+917413949753"> +917413949753</a><br><br>
-
-
-        Whatsapp on👇
-        <br>
-
-        <a href="https://wa.me/*+917413949753*?text=I%20want%20to%20know%20the%20Details%20about%20this.%20As%20i%20have%20saw%20your%20ad%20in%20DawoodiBohraApp."
-            target="_blank">Message us on Whatsapp.</a>
- 
-  </p>
-</center>
-
-    <hr>
-      <img id="dba"
-        src="https://raw.githubusercontent.com/DawoodiBohraApp/DawoodiBohraNotification/main/WhatsApp%20Image%202022-09-26%20at%2010.31.54%20AM.jpeg"
-        alt="">
-
-
-    <p>
-   HEAR HEALTH WORKSHOP
-<br><br>
-A workshop that teaches you how food & nutrition can help prevent & manage heart related diseases 
-
-<br><br>
-We welcome everyone to attend!<br>
-Join us for learning & discussion 
-<br><br>
-PUMP UP YOUR KNOWLEDGE ON:<br>
-HIGH BLOOD PRESSURE <br>
-CARDIAC ARREST<br>
-CONGESTIVE HEART FAILURE <br>
-ARRHYTHMIA<br>
-HEART FAILURE<br>
-ABNORMAL HEART RHYTHM & MANY MORE<br>
-<br>
-The workshop will be consist of an hour<br>
-<br>
-To know more detail about workshop <br>
-Contact <a href="tel:+919558885289" style="text-decoration: none">+919558885289</a><br><br>
-<a href="https://wa.me/+919558885289*?text=I%20want%20to%20know%20the%20Details%20about%20this.%20As%20i%20have%20saw%20your%20ad%20in%20DawoodiBohraApp."
-            target="_blank">Message us on Whatsapp.</a><br>   
-
-        
-         <hr>
--->
-<!--
-     <img id="dba"
-        src="https://raw.githubusercontent.com/DawoodiBohraApp/DawoodiBohraNotification/main/WhatsApp%20Image%202022-09-25%20at%209.57.07%20PM.jpeg"
-        alt="">
-
-
-    <p>
-    Bringing to you, the much awaited :
-<br><br><b>
-GANDHINAGAR UVARSAD TOWNSHIP (GUJARAT)🏢</b>
-<br><br>
-With the Raza Mubaraka of Aqa Maula (TUS), project is Complete & Ready for Possession..🏬
-<br><br>
-📍- Great opportunity for worldwide investors<br>
-📍- Continuous scope of rental income<br>
-📍- Superb lifestyle guaranteed<br>
-<br><b>
-Property details :<br>
-🏡 1 BHK flat - 578 sq. ft. rera carpet<br>
-🏡 2 BHK flat - 1014 sq. ft. rera carpet<br>
-🏡 3 BHK flat - 1465 sq. ft. rera carpet<br></b>
-<br>
-Total flats - <b>91<br>
-(20 Flats LEFT)<br></b>
-Amount ranging from <b> 25 Lakhs INR to 70 Lakhs INR💰<br></b>
-<br>
-Amenities you can enjoy :<br>
-- Masjid in Campus🕌<br>
-- 10,000 sq. ft. mawaid🏫<br>
-- Alloted basement parking for each flat🚗<br>
-- Children'playing area🧸<br>
-- 2 kms away from Metro station🚇<br>
-- 2 kms away from ST bus depo🚎<br>
-<br>
-<b>Gandhinagar is Capital of Gujarat and Pre-planned Clean and Green City<br></b>
-<br>
-Contact now for details & booking :<br>
-<b>Avkar Avenue</b><br>
-Rera number : MAA04583/030119<br>
-<b>Rohit bhai :</b><a href="tel:+917990664673" style="text-decoration: none">+917990664673</a>📲<br>
-<b>Hussain bhai :</b><a href="tel:+919033472982" style="text-decoration: none">+919033472982</a>☎️<br><br>
-
-<b> Whatsapp 🪀👇<br></b>
-<a href="https://wa.me/+919033472982*?text=I%20want%20to%20know%20the%20Details%20about%20this.%20As%20i%20have%20saw%20your%20ad%20in%20DawoodiBohraApp."
-            target="_blank">Message us on Whatsapp.</a><br><br>   
-        
-         <hr>
-     
-  
-    
-
-
-     <center>
-<img id="dba"
-     src="https://raw.githubusercontent.com/DawoodiBohraApp/DawoodiBohraNotification/main/WhatsApp%20Image%202022-09-23%20at%2010.28.38%20AM.jpeg"
-        alt="">
-</center>
-
-
-    <p>
-    <b> 👨‍💻 Coding Classes for your Kid
-<br><br>
-💫 Your child's future begins here💻</b>
-<br><br>
-🎦Online <b> 1 on 1</b> and <b> Small Group </b> Classes
-<br><br>
-✨ Specially for <b>Mumineen</b>
-<br><br>
-<b>📕 GRADE</b><br>
-Class 2nd - 8th<br>
-<br>
-<b>📚 Coding Classes</b><br>
-⭐ Scratch Programming<br>
-⭐ Block based Programming<br>
-⭐ Processing JS<br>
-⭐ HTML CSS JS <br>
-⭐ Making Mobile Apps <br>
-<br>
-<b>💫  Affordable Fees</b><br>
-<br>
-<b>💫 ABOUT TUTOR<br></b>
-✨ Certified in Computer Application <br>
-✨ Teaching since last 5 years.<br>
-<br>
-📆 Open Registration till 15 October.<br><br>
-
-<b>Fill the Registration Form below: 👇🏻<br></b>
-<a href="https://codingclasses.page.link/RegistrationForm" style="text-decoration: none">https://codingclasses.page.link/RegistrationForm</a>
-<br><br>
-<b>📄 Details about courses will be provided after filling the registration form<br></b>
-<br>
-<b>🪀 Whatsapp<br></b>
-<a href="https://wa.me/+918503967257*?text=I%20want%20to%20know%20the%20Details%20about%20this.%20As%20i%20have%20saw%20your%20ad%20in%20DawoodiBohraApp."
-            target="_blank">Message us on Whatsapp.</a><br><br>
-     <b>   📞 CONTACT<br>
-DIWAN'S TECHNICAL SOLUTIONS<br>
-<a href="tel:+918503967257" style="text-decoration: none">+918503967257</a><br><br></b>
-  </p>
-    <hr>
-
-  
-   
--->
-    <!--
-  
- 
-
-  </p>
-    <hr>
--->
-    <!--
-    <center><video controls width="250" height="250">
-
-    <source src="https://raw.githubusercontent.com/DawoodiBohraApp/DawoodiBohraNotification/main/WhatsApp%20Video%202022-09-18%20at%2011.34.55%20AM.mp4"
-            type="video/webm">
-</video></center>
-    <p>
-   
-Salam-e-jameel 👋 👋
-<br><br>
-With Raza 🙏 and Dua Mubarak of AQA MOULA (TUS) Introducing ✨ Shastra Aura
-<br><br>
-Do you know 🤔 what exactly shastra aura is ⁉️
-<br><br>
-◼️ SHASTRA AURA is a "Scientific concept" that helps you get rid of all your problems. 
-<br><br>
-◼️By using the latest technology without a visit we can identify everything over the live video call related to 
-<br><br>
-🔹 Health <br>
-🔹 Wealth<br>
-🔹 Relationship<br>
-🔹 Children<br>
-🔹 Home<br>
-🔹 Property<br>
-🔹 Career<br>
-🔹 And many more. <br><br>
-
-        
-        🪀 <b>Whatsapp Us</b>👇<br>
-<a href="https://wa.me/+919505105555*?text=I%20want%20to%20know%20the%20Details%20about%20this.%20As%20i%20have%20saw%20your%20ad%20in%20DawoodiBohraApp."
-            target="_blank">Message us on Whatsapp.</a><br><br>
-
-Call:  <a href="tel:+919505105555" style="text-decoration: none">+919505105555</a><br>
-
-Watch our 📹 YouTube Videos 👇<br>
-
- <a href="https://tinyurl.com/ShastraAura" style="text-decoration: none">https://tinyurl.com/ShastraAura</a><br><br>
-
-            </p>
-    <hr>
-    
-     <img id="dba"
-        src="https://raw.githubusercontent.com/DawoodiBohraApp/DawoodiBohraNotification/main/IMG-20220911-WA0019.jpg"
-        alt="">
-
-
-    <p>
-        <b> Noori Tours & Travels </b>✈️✈️✈️ 
-<br><br>
-<b>MUMBAI
-<br><br>
-A TRUSTED NAME IN PILGRIMAGE TOUR ORGANISERS AMONG MUMINEEN WORLD WIDE
-<br><br>
-32 YEARS OF KHIDMAT
-<br><br>
-✈️ We arrange Pilgrimage Tours for:
-<br><br>
-• Karbala Moalla<br>
-• Najaf-e- Ashraf<br>
-• Amman (Jordan)<br>
-• Shaam (Damascus)<br>
-• Baitul Muqadas<br>
-• Misr (Cairo)<br>
-• Umrah<br><br>
-
-Additional Service Offered<br><br>
-</b>
-•Domestic & International <br>
-  Air tickets 🎫<br>
-• Holiday Packages 🧳<br>
-• Visa <br>
-• Forex <br><br>
-
-<b>Upcoming October Groups- 2022</b><br><br>
-
-<b>Karbala Moalla / Najaf-E-Ashraf</b><br>
-10 days - Direct flight<br><br>
-
-<b>Bom - Najaf</b> - 15th October 2022 <br>
-<b>Najaf - Bom</b> - 24th October 2022<br><br>
-
-<b>Bom - Najaf</b> - 22nd  October 2022 <br>
-<b>Najaf - Bom</b> - 31st October 2022<br><br>
-
-<b>Bom - Najaf</b> - 29th October 2022 <br>
-<b>Najaf - Bom</b> - 07th Nov 2022<br><br>
-
-Stay in Hotel & Food in Faiz<br>
-Approx - 86,000/- per person<br>
-Stay & Food in Faiz <br>
-Approx - 96,000/- per person<br><br>
-
-<b>2nd Week of November 2022</b><br>
-
-📱 Contact Us at - <br>
-Alihussain Noori<br>
- 
-<a href="tel:+919920921452" style="text-decoration: none">+919558885289</a>
-<br><br>
-
-Farida Ben Noori<br>
-<a href="tel:+919819135440" style="text-decoration: none">+919558885289</a>
-<br><br>
- 
-
-🪀 <b>Whatsapp Us</b>👇<br>
-<a href="https://wa.me/+919920921452*?text=I%20want%20to%20know%20the%20Details%20about%20this.%20As%20i%20have%20saw%20your%20ad%20in%20DawoodiBohraApp."
-            target="_blank">Message us on Whatsapp.</a><br><br>
-
-
-            </p>
-    <hr>
--->
-    <!--
-     <img id="dba"
-        src="https://raw.githubusercontent.com/DawoodiBohraApp/DawoodiBohraNotification/main/WhatsApp%20Image%202022-09-09%20at%208.10.06%20PM.jpeg"
-        alt="">
-
-
-    <p>
-<b>There is always a way to study 📚 while pursuing your Quran Journey </b><br><br>
-
-Blossom Kindergarten Sec School 🏫<br>
-📍 Banswara (Raj)<br><br>
-
-Is conducting <br>
-💥 <b>Online 6th to 12th Class</b>💥<br><br>
-
-✅Discounted Fees<br>
-✅Recorded Sessions <br>
-✅Online Exams<br><br>
-
-💥 <b> Hurry Up!! Enroll now </b> 💥<br><br>
-
-📱 Contact for more information.. <a href="tel:+919462252553" style="text-decoration: none">+919462252553</a><br><br><br>
-
-🪀<b> Whatsapp us </b> 👇<br>
-          <a href="https://wa.me/+919462252553*?text=I%20want%20to%20know%20the%20Details%20about%20this.%20As%20i%20have%20saw%20your%20ad%20in%20DawoodiBohraApp."
-            target="_blank">Message us on Whatsapp.</a><br><br>
-  </p>
-    <hr>
-    
-    
-    
-    <img id="dba"
-        src="https://raw.githubusercontent.com/DawoodiBohraApp/DawoodiBohraNotification/main/WhatsApp%20Image%202022-09-09%20at%204.51.32%20PM.jpeg"
-        alt="">
-
-
-    <p>
-<b>RESIDENTIAL 🏘️ PROJECTS IN 📍 SOUTH PUNE</b><br><br>
-
-🔹 VISIT TOP DEVELOPERS IN 📍 NIBM UNDRI MOHAMMEDWADI & CHOOSE THE BEST PROJECT AS PER YOUR REQUIREMENT<br><br>
-
-🔹 NO BROKERAGE 💰 ON BUILDERS PROJECT<br>
-🔹 SITE VISIT PICK AND DROP AVAILABLE<br>
-🔹 <b>1 / 2 / 3 BHK 🏘️ Flats available with All Amenities near Mall / Dmart / Masjid or Markaz / Road Touch Projects with Well Connected Roads / Near International Schools</b><br>
-🔹 Possession from Dec 2022 to Dec 2024<br>
-🔹 Payment Terms 💰  available as Per Possession Date<br><br>
-
-Call now for Details & Site Visit <br>
-53Acres  🏘️<br>
-        
-        <a href="tel:+918888537777" style="text-decoration: none">+918888537777</a><br>
-<a href="tel:+919029193521" style="text-decoration: none">+919029193521</a><br> <br>
-        
-<b>Whatsapp us 🪀 👇</b><br>
-          <a href="https://wa.me/+918888537777*?text=I%20want%20to%20know%20the%20Details%20about%20this.%20As%20i%20have%20saw%20your%20ad%20in%20DawoodiBohraApp."
-            target="_blank">Message us on Whatsapp.</a><br><br>
-
-🌐  <a href="http://www.53Acres.com" style="text-decoration: none">53Acres.com </a><br><br> 
-
-📍 Address :-<br>
-53Acres 🏘️<br>
-Shop no 15, Gulmohar Habitat,<br>
-Salunke Vihar Road<br>
-Near Unity Splendour<br>
-(Opp Fakhri Hills Road)<br>
-Wanowri<br>
-Pune 411040<br>
-         
-        
-
-       
-
-
-
-
-
-       
-     
-
- 
-      
-
-  </p>
-    <hr>
-
-         <img id="dba"
-        src="https://raw.githubusercontent.com/DawoodiBohraApp/DawoodiBohraNotification/main/WhatsApp%20Image%202022-09-09%20at%2012.43.15%20PM.jpeg"
-        alt="">
-
-
-    <p>
-🚗 RENT A CAR 🚕 <br> <br>
-
-GOOD LUCK TOURS 🧳 & TRAVELS 🚘 <br>
- Your Safety, Our Priority.  <br> <br>
-
-♦️ 🇮🇳 ALL INDIA ZIYARAT TOUR <br>
-♦️ 🇮🇳 HINDUSTAN 27 DUAT MUTLAQIN ZIYARAT <br>
-♦️ CUSTOMIZE ZIYARAT <br> <br>
-
- 3 Row AC INNOVA CAR 🚘 <br> <br>
-
-🌟 Comfortable Cars  <br>
-🌟 Small / Big Cars <br>
-🌟 Safe & Trusted Drivers <br>
-🌟 Affordable Rates <br> <br>
-
-♦️ PLACES:  <br>
-➡️ Mumbai <br>
-➡️ Surat <br>
-➡️ Ahmedabad <br>
-➡️ Galiyakot <br>
-➡️ Jamnagar <br>
-➡️ Mandvi <br>
-➡️ Morbi <br>
-➡️ Hasanphir Saheb <br>
-➡️ Ujjain  <br>
-➡️ Burhanpur <br> <br>
-
-♦️ ALSO AVAILABLE: <br>
-✅ For Mumbai Local <br>
-✅ Airport Drop & Pickup <br>
-✅ One Day Picnic <br>
-✅ Wedding <br>
-✅ Lonavla / Mahabaleshwar/ Goa etc. <br> <br>
-
-🔖  BOOK NOW <br> <br>
-
- 📱 CONTACT 👇👇 <br>
- Yahya Bhai Hariyanawala <br>
-         <a href="tel:+919892475419" style="text-decoration: none">+919892475419</a><br> 
-        <a href="tel:+919819762452" style="text-decoration: none">+919819762452</a><br> <br>
-
-📩 Email: <br> <a href="mailto:enquiry@goodlucktravels.in" style="text-decoration: none">enquiry@goodlucktravels.in</a><br><br>
-
-🔗 Visit: <br>
-        <a href="http://www.goodlucktravels.in" style="text-decoration: none">http://www.goodlucktravels.in</a><br><br>
-
-
-🪀 Whatsapp<br>
-         <a href="https://wa.me/+919892475419?text=GOOD%20LUCK%20TOURS%20AND%20TRAVELS%20%20i%20have%20saw%20your%20ad%20in%20Dawoodi%20Bohra%20App.%20As%20you%20provide%20ALL%20INDIA%20ZIYARAT%20TOUR,%20HINDUSTAN%2027%20DUAT%20MUTLAQIN%20ZIYARAT,%20%20CUSTOMIZE%20ZIYARAT.%20I%20want%20to%20know%20the%20Detail%20About%20this."
-            target="_blank">Message us on Whatsapp.</a><br><br>
-
-
-       
-     
-
- 
-      
-
-  </p>
-    <hr>
--->
-<!--
-     <img id="dba"
-        src="https://raw.githubusercontent.com/DawoodiBohraApp/DawoodiBohraNotification/main/WhatsApp%20Image%202022-09-06%20at%205.32.19%20PM.jpeg"
-        alt="">
-
-
-    <p>
-        
-<center><b>NAJMI PROPERTIES 🏘️</b> <br>
-
-<b>Real Estate Agency</b> <br><br></center>
-
-Najmi Properties is RERA registered firm that deals in Ready Possession to use <br>
-◼️ Flats🏠<br>
-◼️ Shop 🛒<br>
-◼️ Office 🏬<br>
-◼️ Rental<br>
-◼️ Lease<br>
-◼️ Selling<br>
-◼️ Buying<br>
-◼️ Resale<br><br>
-
-We also provide you plots such as<br>
-🔹 Residential plots<br>
-🔹 NA Plots<br>
-🔹 Agricultural Plots<br>
-🔹 Farmhouse Plots<br>
-🔹 Plots for investment as well as plots for First home, second home as per your budget around 50 kms of Pune<br><br>
-
-For more info Contact <br>
-Najmi Properties<br>
-Murtaza Lokhandwala <br>
-        <a href="tel:+918675786110">📱 +918675786110</a><br>
-        <a href="tel:+919307338124">📱 +919307338124</a><br>
-        <a href="tel:+919987899052">📱 +919987899052</a><br><br>
-
- 
-      
-🪀 Contact 👇 <br>
-        <a href="https://wa.me/+918675786110*?text=I%20want%20to%20know%20the%20Details%20about%20this.%20As%20i%20have%20saw%20your%20ad%20in%20DawoodiBohraApp."
-            target="_blank">Message us on Whatsapp.</a><br><br>
-
-  
-  </p>
-
-    <hr>
--->
-    <!--
-     <img id="dba"
-        src="https://raw.githubusercontent.com/DawoodiBohraApp/DawoodiBohraNotification/main/WhatsApp%20Image%202022-09-04%20at%2011.29.53%20AM%20(1).jpeg"
-        alt="">
-
-
-    <p>
-        
-<b>IMPALA PROPERTIES </b> 🏘️<br>
-🔷<em> Real Estate Agency </em>🔷<br><br>
-
-<b>Experienced</b> and Most <b>TRUSTED</b> Real Estate 🏘️ property management services.<br><br>
-
-Available in Pune 📍Ready Possession to use<br>
-♦️Flats 🏡<br>
-♦️Shops 🛍️<br>
-♦️Offices 🏢 <br>
-♦️Rental Lease<br>
-♦️Selling<br>
-♦️Buying<br>
-♦️(Resale) in Pune.<br><br>
-
-🏷️<b>BEST PRICE GUARANTEE</b><br><br>
-
-<b>HURRY N⏱️W</b><br><br>
-
-For more details contact:<br>
-📱 Mr. Zoher Esoofally 👇<br>
-        <a href="tel:+917020793094">+917020793094</a><br>
-        <a href="tel:+919822343019">+919822343019</a><br><br>
-
-
-
-🪀 Whatsapp 👇 <br>
-        <a href="https://wa.me/+919822343019*?text=I%20want%20to%20know%20the%20Details%20about%20this.%20As%20i%20have%20saw%20your%20ad%20in%20DawoodiBohraApp."
-            target="_blank">Message us on Whatsapp.</a><br><br>
-  
-  </p>
-
-    <hr>
-    <img id="dba"
-        src="https://raw.githubusercontent.com/DawoodiBohraApp/DawoodiBohraNotification/main/WhatsApp%20Image%202022-09-04%20at%2011.45.47%20AM.jpeg"
-        alt="">
-
-
-    <p>
-        
-<b>Zorbax - The Undershirt 👕 Maker</b> <br><br>
-
-Perfect Ultra Soft Inner Tshirts 👕  Just For You<br><br>
-
-👉Try it to believe it!!<br><br>
-
-Available in:-<br>
-🔸 Round Crew Neck<br>
-🔸"V" neck <br>
-🔸 Full Sleeves<br>
-🔸Solid Colour Tshirts<br>
-🔸Kids Undershirt<br>
-🔸Sleeved Vest<br>
-🔸Pajamas<br>
-<br>
-<b>Made from Ultra Soft Pima Cotton<br>
-        <br>
-🪀 Whatsapp 👇 <br>
-        <a href="https://wa.me/+918160473282*?text=I%20want%20to%20know%20the%20Details%20about%20this.%20As%20i%20have%20saw%20your%20ad%20in%20DawoodiBohraApp."
-            target="_blank">Message us on Whatsapp.</a><br><br></b>
- 📱 Contact:<br>
-        <a href="tel:+918605636666">+918605636666</a><br>
-<br>
-Instagaram :-  <a href="http://instagram.com/_u/zorbaxworld/">@zorbaxindia</a><br>
-        
-🌐<a href="https://www.zorbaxworld.com">www.zorbaxworld.com</a> <br><br>
-
-<b>DEALERS AND RESELLERS ARE WELCOME</b>
-
-
-        
-
-
-
-
-  
-  </p>
-
-    <hr>
-    
-  -->
-<!--
-    
-  
--->
-<!--
-
-
- 
--->
-<!--
-<center>
-    <img id="dba"
-        src="https://raw.githubusercontent.com/DawoodiBohraApp/DawoodiBohraNotification/main/IMG-20220831-WA0009.jpg"
-        alt="">
-
-
-    <p>
-        <b>
-💥 DIWALI 🪔 VACATION TOUR 💥 <br>
-HATIMI TOURS 🧳 & TRAVELS 🚌<br><br>
-
-🔹 Hindustan na 27 Doaat Mutalaqin RA. ane Hudud Fozola AQ. ni Ziyarat no ek tour
-<br><br>
-📅 19th October 2022 Wednesday
-<br><br>
-🔹Ahmadabad si shuru thase ane 11 days ma sagli ziyarat tamam kari ne<br>
- 📅 30 October 2022 sunday<br>
-🔹Ahmadabad return avse. Inshalaah <br><br>
-
-▪️ AC volvo samy slipper Bus 🚌<br>
-▪️ Refreshment/mazar Mubarak accommodation/transport all inclusive<br><br>
-
-💰 Rs. 12853/-<br><br>
-
-    
-📱 Contact: Mulla taha badri 👇👇<br>
-<a href="tel:+918252535353"> +918252535353</a><br><br>
-
-
-        Whatsapp on👇
-        <br>
-
-        <a href="https://wa.me/*+918252535353*?text=I%20want%20to%20know%20the%20Details%20about%20this.%20As%20i%20have%20saw%20your%20ad%20in%20DawoodiBohraApp."
-            target="_blank">Message us on Whatsapp.</a>
-  </b>
-  </p>
-</center>
-    <hr>
-
-
--->
-
-<!--
-
-
--->
-
-<hr>
-
-
-
-    <h2>Dawoodi Bohra App Premium</h2>
-    </center>
-
-    <p>
-        On Demand of Many Mumineen, We have released the <b>All New Version of Dawoodi Bohra App</b>.
-        <br> <br>
-        This <b>Premium</b> Version of Dawoodi Bohra App is <b> 100% Ads free for LIFETIME</b> with Many more Features and Easy to Use.
-
-        <br> <br>
-        Update to Dawoodi Bohra App Premium and enjoy Offline Duas.
-
-        <br> <br>
-        You can now recite duas offline without internet in <b> Dawoodi Bohra App Premium.</b>
-
-
-        <br> <br>
-        Download the <b>Dawoodi Bohra App Premium NOW.</b>
-
-
-
-    </p>
-
-    <center>
-
-        <a
-            href="https://play.google.com/store/apps/details?id=com.DawoodiBohraAppPremium.Mumineen.duas.dawoodibohraduas.Duas&hl=en_IN&gl=US"><img
-                id="imgplay" src="https://freeiconshop.com/wp-content/uploads/edd/google-play-badge.png"
-                alt="Click Here to Download"></a>
-        <br>
-        <img id="imgbanner" src="https://raw.githubusercontent.com/DawoodiBohraApp/WebAdsImages/main/Main%20Banner.png"
-            alt="Dawoodi Bohra App Premium">
-        <br>
-    </center>
-    <hr>
 </body>
 
 </html>
