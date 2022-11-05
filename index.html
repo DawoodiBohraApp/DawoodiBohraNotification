@@ -1,28 +1,35 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notification</title>
     <style>
-          * {
+        * {
             margin: 0px;
             padding: 0px;
-  
+
         }
-        #if{
-           width:95vw;
-           height: 95vh;
+
+        #if {
+            width: 95vw;
+            height: 95vh;
         }
     </style>
-
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
 </head>
-<body>
- <!-- <iframe id="if" src="https://dawoodibohraapp.com/notification.html" frameborder="0"></iframe>    -->
 
- <embed id="if" src="https://dawoodibohraapp.com/notification.html" type="">
+<body>
+    <!-- <iframe id="if" src="https://dawoodibohraapp.com/notification.html" frameborder="0"></iframe>    -->
+
+    <!-- <embed id="if" src="https://dawoodibohraapp.com/notification.html" type=""> -->
+        <div id="SampleElement"></div>
+        <script>
+            $('#SampleElement').load('https://dawoodibohraapp.com/notification.html');
+        </script>
 </body>
+
 </html>
